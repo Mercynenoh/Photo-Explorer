@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Author, Category, Location, Photo
 
 # Create your views here.
 def gallery(request):

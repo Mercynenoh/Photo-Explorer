@@ -6,8 +6,10 @@
             <a class="btn btn-dark my-3" href="{% url 'gallery'%}">Go Back</a>
         
         <div style="height:100vh;">
-            <img class="image-thumbnail" src="https://www.ccarprice.com/products/Mercedes-Benz-G-Class-G-350-d.jpg" alt="Card image cap"> 
-            <p class="card-text">Category: Cars</p>
+            <p class="card-text">{{photo.author}}</p>
+            <img class="image-thumbnail" src="{{photo.image.url}}" alt="Card image cap">
+            <p class="card-text">Category: {{photo.category}}</p>
+            <p class="card-text"><em>{{photo.location}}</em></p>
         </div>
     </div>
     </div> 

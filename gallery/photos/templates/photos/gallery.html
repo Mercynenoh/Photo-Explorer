@@ -1,0 +1,45 @@
+{%extends 'photos/base.html'%}
+{% block content %}
+<div class="container">
+    <div class="row m-3">
+      <div class="col-md-9">
+         <div class="row">
+             <div class="col-md-4">
+                <div class="card my-2" >
+                    <img class="image-thumbnail" src="https://www.ccarprice.com/products/Mercedes-Benz-G-Class-G-350-d.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">Category: Cars</p>
+                    </div>
+                    <a href="{% url 'photo' 4 %}" class="btn btn-dark btn-sm m-1 text-white"> View</a>
+                  </div>
+             </div>
+             <div class="col-md-4">
+                <div class="card my-2" >
+                    <img class="image-thumbnail" src="https://www.ccarprice.com/products/Mercedes-Benz-G-Class-G-350-d.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">Category: Cars</p>
+                    </div>
+                    <a href="{% url 'photo' 4 %}" class="btn btn-dark btn-sm m-1 text-white"> View</a>
+                  </div>
+             </div>
+
+         </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              Categories
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+              <li class="list-group-item">
+                  <a class="btn btn-dark text-white" href="{% url 'new' %}">Add Post</a>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

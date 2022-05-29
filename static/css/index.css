@@ -5,3 +5,18 @@
 h1{
     color: royalblue;
 }
+
+  .two:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .two {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap : 1rem
+  }
+
+  .view{
+      text-align: center;
+      border-image: fill;
+  }

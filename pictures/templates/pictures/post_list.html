@@ -1,14 +1,38 @@
 {%extends 'pictures/base.html'%}
 {% block content %}
-<h1 class="text-center"> Welcome to The-Photo-Gallery</h1>
-<a href="{% url 'new' %}" class="btn btn-dark" style="margin-left: 300px;">Create new post</a>
-    
-    {% for image in object_list %}
-    <div style="margin-left: 330px;">
-        <h5><strong>{{image.author.username}}</strong></h5>
-        <img src="{{image.image.url}}" width="500" height="400" style="text-align:center;">
-        <p ><em >{{image.created}}</em><br>{{image.description}}<br>{{image.category}}</p>
-        <a href="{% url 'image' 5 %}" class="btn btn-dark btn-sm m-1 text-white"> View</a>
+<div class="container">
+    <h1 class="text-center"> Welcome to The-Photo-Gallery</h1>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">Categories:</li>
+                {% for category in object_list %}
+                 <li class="list-group-item">{{category.category}}</li>
+                {% endfor %}
+                  <a href="{% url 'new' %}" class="btn btn-dark" >Create new post</a>
+                </ul>
+
+              </div>
+           
+        </div>
+        <div class="col-md-9">
+            <div class="row two">
+                {% for image in object_list %}
+                <div class="col-md-4 ml-4" >    
+                    <div class="card ml-5" style="width: 18rem;">
+                         <img src="{{image.image.url}}"style="text-align:center;">
+                        <div class="card-body">
+                            <p ><em >{{image.created}}</em><br>{{image.description}}<br>{{image.category}}</p>
+                            <a href="{% url 'image' image.id %}" class="btn btn-dark" >View post</a>
+                         
+                        </div>
+                      </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
     </div>
-{% endfor %}
+</div>
 {% endblock %}

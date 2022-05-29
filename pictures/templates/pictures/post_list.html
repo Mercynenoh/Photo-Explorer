@@ -3,20 +3,10 @@
 <div class="container-fluid">
     <h1 class="text-center"> Welcome to The-Photo-Gallery</h1>
     <div class="row">
-        <div class="sidebar">
-            <div class="card" style="width: 18rem;">
+        <div class="col-md-3">
+            <div class="card mt-4" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
-                    <!-- <label>View Categories</label> -->
-                    <select name="category" class="form-control-file">
-                        <option value="none">Categories Available</option>
-                        {% for category in object_list %}
-                        <option value="{{category.id}}">{{category.category}}</option>
-                        {% endfor %}
-                       
-                    </ul>
-    
-                    </select>
-                <!-- <li class="list-group-item">Categories:</li>
+                <li class="list-group-item">Categories:</li>
                 <li class="list-group-item">
                     <a href="{% url 'list' %}">All</a>
                 </li>
@@ -25,19 +15,18 @@
                      <a href="{% url 'list' %}?category={{category.category}}">{{category.category}}</a>
                 </li>
                 {% endfor %}
-                  <a href="{% url 'new' %}" class="btn btn-dark" >Create new post</a> -->
+                  <a href="{% url 'new' %}" class="btn btn-dark" >Create new post</a>
                 </ul>
-                <a href="{% url 'new' %}" class="btn btn-dark mt-2" >Create new post</a> 
+
               </div>
            
         </div>
         <div class="col-md-9">
             <div class="row two mb-3">
                 {% for image in object_list %}
-                <div class="col-md-4 my-4 " > 
-                    <p class="card-text">{{image.author.username}}</p>   
+                <div class="col-md-4 my-4 " >    
                     <div class="card display">
-                    
+                        <p class="card-text">{{image.author.username}}</p>
                          <img src="{{image.image.url}}"style="text-align:center;">
                         <div class="card-body">
                             <p >{{image.description}}<br>Category:{{image.category}}<br><em >{{image.created}}</em><br><em>{{image.location}}</em></p>

@@ -24,6 +24,14 @@ class Category(models.Model):
     def __str__(self):
         return self.category
 
+class Location(models.Model):
+    country =  models.CharField(max_length =10)
+    city =  models.CharField(max_length =10)
+    
+    def __str__(self):
+        return self.city
+
+
 class Post(models.Model):
     image = models.ImageField(upload_to = 'articles/',default='IMAGE')
     imagename =  models.CharField(max_length =30)
@@ -32,6 +40,7 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    location = models.ForeignKey(Location, on_delete=models.CASCADE,default='LOCATION')
 
     
     def __str__(self):

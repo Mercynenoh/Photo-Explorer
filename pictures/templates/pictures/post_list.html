@@ -7,8 +7,13 @@
             <div class="card" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item">Categories:</li>
+                <li class="list-group-item">
+                    <a href="{% url 'list' %}">All</a>
+                </li>
                 {% for category in object_list %}
-                 <li class="list-group-item">{{category.category}}</li>
+                 <li class="list-group-item">
+                     <a href="{% url 'list' %}?category={{category.category}}">{{category.category}}</a>
+                </li>
                 {% endfor %}
                   <a href="{% url 'new' %}" class="btn btn-dark" >Create new post</a>
                 </ul>
@@ -17,13 +22,13 @@
            
         </div>
         <div class="col-md-9">
-            <div class="row two">
+            <div class="row two mb-3">
                 {% for image in object_list %}
                 <div class="col-md-4 ml-4" >    
-                    <div class="card ml-5" style="width: 18rem;">
+                    <div class="card ml-5 display">
                          <img src="{{image.image.url}}"style="text-align:center;">
                         <div class="card-body">
-                            <p ><em >{{image.created}}</em><br>{{image.description}}<br>{{image.category}}</p>
+                            <p >{{image.description}}<br>Category:{{image.category}}<br><em >{{image.created}}</em><br><em>{{image.location}}</em></p>
                             <a href="{% url 'image' image.id %}" class="btn btn-dark" >View post</a>
                          
                         </div>

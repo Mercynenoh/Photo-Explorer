@@ -26,7 +26,19 @@ def viewPhoto(request, pk):
 class ImageList(ListView):
     model = Post
 
+def gallery(request):
+    category= category.request.GET.get('category')
+    print('category:', category)
+    categories = Category.objects.all()
+    authors = Author.objects.all()
+    photos = Photo.objects.all()
+
+    context = {'categories': categories,'photos':photos}
+
+    return render(request, 'pictures/post_list.html', context)
+
+
 class ImageCreate(CreateView):
     model = Post
-    fields = ['image', 'imagename', 'description', 'author', 'category']
+    fields = ['image', 'imagename', 'description', 'author', 'category', 'location']
     success_url = '/'

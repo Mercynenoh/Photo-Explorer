@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Post, Author
+from .models import Category, Post, Author, Location
 # Register your models here.
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ['category']
@@ -8,4 +8,5 @@ class ArticleAdmin(admin.ModelAdmin):
 
 admin.site.register(Post)
 admin.site.register(Author)
+admin.site.register(Location)
 admin.site.register(Category, ArticleAdmin)

@@ -24,8 +24,8 @@
         <div class="col-md-9">
             <div class="row two mb-3">
                 {% for image in object_list %}
-                <div class="col-md-4 ml-4" >    
-                    <div class="card ml-5">
+                <div class="col-md-4 my-4 " >    
+                    <div class="card display">
                          <img src="{{image.image.url}}"style="text-align:center;">
                         <div class="card-body">
                             <p >{{image.description}}<br>Category:{{image.category}}<br><em >{{image.created}}</em><br><em>{{image.location}}</em></p>

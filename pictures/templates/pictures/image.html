@@ -1,0 +1,19 @@
+{%extends 'pictures/base.html'%}
+
+ {% block content %}
+
+ <div class="container">
+
+  <div class="col"> 
+    <a class="btn btn-dark my-3" href="/">Go Back</a>
+</div>
+<div style="height:90vh">
+    <p class="card-text">{{post.author.username}}</p>
+    <img class="image-thumbnail" src="{{post.image.url}}" alt="Card image cap">
+    <p class="card-text">Category: {{post.category}}</p>
+</div>
+
+
+ </div>
+
+ {% endblock %}

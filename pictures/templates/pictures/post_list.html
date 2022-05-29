@@ -1,0 +1,14 @@
+{%extends 'pictures/base.html'%}
+{% block content %}
+<h1 class="text-center"> Welcome to The-Photo-Gallery</h1>
+<a href="{% url 'new' %}" class="btn btn-dark" style="margin-left: 300px;">Create new post</a>
+    
+    {% for image in object_list %}
+    <div style="margin-left: 330px;">
+        <h5><strong>{{image.author.username}}</strong></h5>
+        <img src="{{image.image.url}}" width="500" height="400" style="text-align:center;">
+        <p ><em >{{image.created}}</em><br>{{image.description}}<br>{{image.category}}</p>
+        <a href="{% url 'image' 5 %}" class="btn btn-dark btn-sm m-1 text-white"> View</a>
+    </div>
+{% endfor %}
+{% endblock %}

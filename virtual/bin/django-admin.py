@@ -1,4 +1,4 @@
-#!/home/mercy/moringa-school-projects/photo-gallery/virtual/bin/python3
+#!/home/mercy/moringa-school-projects/picture-perfect/virtual/bin/python3
 from django.core import management
 
 if __name__ == "__main__":

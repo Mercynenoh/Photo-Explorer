@@ -1,4 +1,4 @@
-.container{
+.container-fluid{
     background-color:beige;
     margin-top: 10px;
 }
@@ -23,6 +23,9 @@ h1{
   }
   .my-4{
     margin-left: 70px;
+  }
+  .sidebar{
+      margin-left: 50px;
   }
 
   

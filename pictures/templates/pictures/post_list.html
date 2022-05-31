@@ -26,8 +26,8 @@
                 {% for image in object_list %}
                 <div class="col-md-4 my-4 " >    
                     <div class="card display">
-                        <p class="card-text">{{image.author.username}}</p>
-                         <img src="{{image.image.url}}"style="text-align:center;">
+                        <!-- <p class="card-text">{{image.author.username}}</p> -->
+                         <img src="{{image.image.url}}"style="text-align:center ">
                         <div class="card-body">
                             <p >{{image.description}}<br>Category:{{image.category}}<br><em >{{image.created}}</em><br><em>{{image.location}}</em></p>
                             <a href="{% url 'image' image.id %}" class="btn btn-dark" >View post</a>

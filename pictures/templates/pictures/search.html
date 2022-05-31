@@ -15,7 +15,7 @@
 
   {% if posts %}
     {% for post in posts %}
-      <div class="col-sm-6 col-md-3">
+      <div class="col-sm-6 col-md-3 my-3 m-4">
         <!-- <h5>Category:{{post.category}}</h5> -->
         <img src="{{post.image.url}}" src="" height="300px" width="300px"style="border-radius: 8px; justify-items: center;" >
         <p>{{post.description}}<br>Category:{{post.category}}<br><em >{{post.created}}</em><br><em>{{post.location}}</em></p>

@@ -31,6 +31,11 @@ class Location(models.Model):
     def __str__(self):
         return self.city
 
+    @classmethod
+    def get_location_id(cls):
+        location = Location.objects.all()
+        return location
+
 
 class Post(models.Model):
     image = models.ImageField(upload_to = 'articles/',default='IMAGE')
@@ -42,7 +47,6 @@ class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     location = models.ForeignKey(Location, on_delete=models.CASCADE,default='LOCATION')
 
-    
     def __str__(self):
         return self.imagename
 

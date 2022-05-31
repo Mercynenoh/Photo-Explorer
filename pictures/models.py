@@ -50,9 +50,9 @@ class Post(models.Model):
         self.save()
 
     @classmethod
-    def search_by_imagename(cls,search_term):
-        object_list = cls.objects.filter(imagename__icontains=search_term)
-        return object_list
+    def search_by_category(cls,search_term):
+        pictures = cls.objects.filter(category__category__icontains=search_term)
+        return pictures
 
 
 

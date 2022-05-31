@@ -11,7 +11,7 @@ def search_results(request):
 
     if 'post' in request.GET and request.GET["post"]:
         search_term = request.GET.get("post")
-        searched_posts = Post.search_by_imagename(search_term)
+        searched_posts = Post.search_by_category(search_term)
         message = f"{search_term}"
 
         return render(request, 'pictures/search.html',{"message":message,"posts": searched_posts})

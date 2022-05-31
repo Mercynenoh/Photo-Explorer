@@ -4,7 +4,7 @@ from .models import Category, Post, Author, Location
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ['category']
     ordering = ['category']
-    search_fields = ['category']
+    search_fields = ['foreignkeyfield__name']
 
 admin.site.register(Post)
 admin.site.register(Author)

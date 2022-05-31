@@ -3,6 +3,8 @@ from django.http  import HttpResponse, Http404
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView
 from pictures.models import Post, Category, Author
+from django import template
+from django.db import models
 
 
 def search_results(request):
@@ -42,3 +44,18 @@ class ImageCreate(CreateView):
     model = Post
     fields = ['image', 'imagename', 'description', 'author', 'category', 'location']
     success_url = '/'
+
+# register = template.Library()
+# Post = models.get_model('photologue', 'photo')
+
+# def photo_url(format_string):
+#     """Tries to load the appropriate Photologue Photo object by slug, and outputs
+#        the url to the display image.  If photo is not found, then returns an empty
+#        string."""
+#     try:
+#         photo = Photo.objects.get(title_slug=format_string, is_public=True)
+#         return photo.get_display_url()
+#     except Photo.DoesNotExist:
+#         return ''
+
+# register.simple_tag(photo_url)

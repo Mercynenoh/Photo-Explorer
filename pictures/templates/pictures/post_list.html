@@ -25,11 +25,11 @@
             <div class="row two mb-3">
                 {% for image in object_list %}
                 <div class="col-md-4 my-4 " >    
-                    <div class="card display">
+                    <div class="">
                         <!-- <p class="card-text">{{image.author.username}}</p> -->
-                         <img src="{{image.image.url}}"style="text-align:center ">
+                         <img src="{{image.image.url}}" src="" height="300px" width="300px" >
                         <div class="card-body">
-                            <p >{{image.description}}<br>Category:{{image.category}}<br><em >{{image.created}}</em><br><em>{{image.location}}</em></p>
+                            <!-- <p >{{image.description}}<br>Category:{{image.category}}<br><em >{{image.created}}</em><br><em>{{image.location}}</em></p> -->
                             <a href="{% url 'image' image.id %}" class="btn btn-dark" >View post</a>
                          
                         </div>

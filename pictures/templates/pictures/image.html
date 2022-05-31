@@ -8,12 +8,22 @@
     <a class="btn btn-dark my-3" href="/">Go Back</a>
 </div>
 <div class="view">
+    <div class="row">
+        <div class="col-md-4">
+            <img class="image-thumbnail" src="{{post.image.url}}" alt="Card image cap" width="400px" height="400px" style="border-radius: 8px; justify-items: center;">
+        </div>
+        <div class="col-md-8">
+            <h2>Image Details</h2>
+            <p >{{post.description}}<br>Category:{{post.category}}<br><em>{{post.created}}</em><em>{{post.location}}</em></p>  
+            <a href="{{post.image.url}}">{{post.image.url}}</a>
+        </div>
+    </div>
     <!-- <p class="card-text">{{post.author.username}}</p> -->
-    <img class="image-thumbnail" src="{{post.image.url}}" alt="Card image cap" style="width:400px" height="400px">
-    <p ><em >{{post.created}}</em><br>{{post.description}}<br>{{post.category}}<br><em>{{post.location}}</em></p>
+    
+    
 </div>
 
-<a href="{{post.image.url}}">{{post.image.url}}</a>
+
 <!-- <button type="button" onclick="getURL();" class="copy-btn"><a href="{{post.image.url}}">{{post.image.url}}</a></button> -->
 
 

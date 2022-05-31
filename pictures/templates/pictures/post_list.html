@@ -6,7 +6,7 @@
         <div class="col-md-3">
             <div class="card mt-4" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
-                <li class="list-group-item">Categories:</li>
+                <li class="list-group-item">Categories Posted:</li>
                 {% for category in object_list %}
                  <li class="list-group-item">
                 {{category.category}}
@@ -24,10 +24,10 @@
                 <div class="col-md-4 my-4 " >    
                     <div class="">
                         <!-- <p class="card-text">{{image.author.username}}</p> -->
-                         <img src="{{image.image.url}}" src="" height="300px" width="300px" style="border-radius:20%">
+                         <img src="{{image.image.url}}" src="" height="300px" width="300px" style="border-radius:15%;">
                         <div class="card-body">
                             <!-- <p >{{image.description}}<br>Category:{{image.category}}<br><em >{{image.created}}</em><br><em>{{image.location}}</em></p> -->
-                            <a href="{% url 'image' image.id %}" class="btn btn-dark" >View post</a>
+                            <a href="{% url 'image' image.id %}" class="btn btn-dark" >View details</a>
                          
                         </div>
                       </div>

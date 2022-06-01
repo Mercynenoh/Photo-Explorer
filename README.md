@@ -1,6 +1,7 @@
 # Photo-Explorer
 Post your beautiful captured moments and see other peoples posts as well
-![Screenshot from 2022-05-29 22-47-33](https://user-images.githubusercontent.com/94294714/170888941-d2474ec4-89a3-4d92-b515-ae52bf0acb2d.png)
+![Screenshot from 2022-06-01 20-33-19](https://user-images.githubusercontent.com/94294714/171467432-6f915aba-1eed-42d1-82c5-925982f1cc62.png)
+
 
 # By:
 Mercy Chepngenoh
